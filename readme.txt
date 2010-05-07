@@ -10,7 +10,7 @@ which can be found in bf_rpl1.5.txt.
 
 The texts of the King James and original Greek and Hebrew, as well as
 the Strong's numbers and grammatical/morphological data, are all in the public domain.
-All other text is licensed under the Creative Commons 
+All other text is licensed under the Creative Commons
 Attribution-Noncommercial-Share Alike 3.0 Unported license.
 
 

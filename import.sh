@@ -17,4 +17,4 @@ read mysqlDataBase
 echo "Enter username:";
 read mysqlUserName
 
-gunzip -c BibleForge.sql.gz | mysql -u $mysqlUserName -p $mysqlDataBase
+gzip -d -c BibleForge.sql.gz | mysql -u $mysqlUserName -p $mysqlDataBase

@@ -41,15 +41,15 @@ echo -e "\n"
 # NOTE: Backticks (`) execute the command and store the results.
 # NOTE: 2>&1 gets STDERR and redirects it to STDOUT.
 # NOTE: The -e argument makes mysql quite immediately.
-RES=`mysql -u $mysqlUserName -p$mysqlPassword "$mysqlDataBase" -e "show tables;" 2>&1`
+RES=`mysql -u "$mysqlUserName" -p"$mysqlPassword" "$mysqlDataBase" -e "show tables;" 2>&1`
 
 # See if an error message was returned.  Error 1049 means no database was found.
 # NOTE: Get the trailing space to make sure that we get the entire error number.
 if [ "${RES:0:11}" = "ERROR 1049 " ]; then
     echo "Attempting to create database '$mysqlDataBase'"
-    mysql -u $mysqlUserName -p$mysqlPassword -e "CREATE DATABASE \`$mysqlDataBase\`;"
+    mysql -u "$mysqlUserName" -p"$mysqlPassword" -e "CREATE DATABASE \`$mysqlDataBase\`;"
 fi
 
 echo "Importing databases...please wait...";
 
-gzip -d -c BibleForge.sql.gz | mysql -u $mysqlUserName -p$mysqlPassword "$mysqlDataBase"
+gzip -d -c BibleForge.sql.gz | mysql -u "$mysqlUserName" -p"$mysqlPassword" "$mysqlDataBase"

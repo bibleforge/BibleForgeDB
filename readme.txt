@@ -16,5 +16,5 @@ Attribution-Noncommercial-Share Alike 3.0 Unported license.
 
 For more info about the licenses, please see the following links:
 Reciprocal Public License 1.5: http://www.opensource.org/licenses/rpl1.5.txt
-Public Domain: http://creativecommons.org/licenses/publicdomain/
+Public Domain: http://creativecommons.org/publicdomain/mark/1.0/
 Creative Commons by-nc-sa: http://creativecommons.org/licenses/by-nc-sa/3.0/

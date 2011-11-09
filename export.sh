@@ -33,10 +33,16 @@ stty -echo
 read mysqlPassword
 # Turn typing echo back on.
 stty echo
-# Since "echo" is turned off, the return character is not caught, so the script needs to insert a line break manually.
-# NOTE: This creates two line breaks because echo automatically adds a line break.
+# Since "echo" was turned off, the return character is not caught, so the script needs to insert a line break manually.
+# NOTE: This creates two line breaks because "echo" automatically adds a line break.
 echo -e "\n"
 
 echo "Exporting databases...please wait...";
 
 mysqldump --add-locks=false --lock-tables=false -u "$mysqlUserName" -h localhost -p"$mysqlPassword" "$mysqlDataBase" bible_english bible_english_html bible_english_verses morphology | gzip -9 > BibleForge.sql.gz
+
+mysqldump --add-locks=false --lock-tables=false -u "$mysqlUserName" -h localhost -p"$mysqlPassword" "$mysqlDataBase" bible_original | gzip -9 > extra/bible_original.sql.gz
+
+mysqldump --add-locks=false --lock-tables=false -u "$mysqlUserName" -h localhost -p"$mysqlPassword" "$mysqlDataBase" book_english | gzip -9 > extra/book_english.sql.gz
+
+mysqldump --add-locks=false --lock-tables=false -u "$mysqlUserName" -h localhost -p"$mysqlPassword" "$mysqlDataBase" paragraphs | gzip -9 > extra/paragraphs.sql.gz

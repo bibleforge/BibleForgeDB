@@ -4,9 +4,11 @@ BibleForge is a free, open source Bible study web app.
 
 License:
 
-All code is copyrighted under the Affero General Public License Version 3 (AGPL-3.0) which can be found in bf_rpl1.5.txt.
+All code is copyrighted under the Affero General Public License Version 3 (AGPL-3.0), which can be found in agpl-3.0.txt.
 
-The texts of the King James and original Greek and Hebrew, as well as the Strong's numbers and grammatical/morphological data, are all in the public domain.
+The texts of the King James Bible and the original Greek and Hebrew (as well other related data, like the Strong's numbers
+and grammatical information), and the Greek and Hebrew Lexicons are all in the public domain.
+
 All other text is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported license or higher.
 
 

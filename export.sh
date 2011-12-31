@@ -39,9 +39,16 @@ echo -e "\n"
 
 echo "Exporting databases...please wait...";
 
-mysqldump --add-locks=false --lock-tables=false -u "$mysqlUserName" -h localhost -p"$mysqlPassword" "$mysqlDataBase" bible_english bible_english_html bible_english_verses morphology | gzip -9 > BibleForge.sql.gz
+mysqldump --add-locks=false --lock-tables=false -u "$mysqlUserName" -h localhost -p"$mysqlPassword" "$mysqlDataBase" bible_original | gzip -9 > bible_original.sql.gz
 
-mysqldump --add-locks=false --lock-tables=false -u "$mysqlUserName" -h localhost -p"$mysqlPassword" "$mysqlDataBase" bible_original | gzip -9 > extra/bible_original.sql.gz
+mysqldump --add-locks=false --lock-tables=false -u "$mysqlUserName" -h localhost -p"$mysqlPassword" "$mysqlDataBase" bible_english bible_english_html bible_english_verses morphology | gzip -9 > bible_english_all.sql.gz
+
+# There is no morphology for bible_en_em, yet.
+mysqldump --add-locks=false --lock-tables=false -u "$mysqlUserName" -h localhost -p"$mysqlPassword" "$mysqlDataBase" bible_en_em bible_en_em_html bible_en_em_verses | gzip -9 > bible_en_em_all.sql.gz
+
+mysqldump --add-locks=false --lock-tables=false -u "$mysqlUserName" -h localhost -p"$mysqlPassword" "$mysqlDataBase" lexicon_greek | gzip -9 > lexicon_greek.sql.gz
+
+mysqldump --add-locks=false --lock-tables=false -u "$mysqlUserName" -h localhost -p"$mysqlPassword" "$mysqlDataBase" lexicon_hebrew | gzip -9 > lexicon_hebrew.sql.gz
 
 mysqldump --add-locks=false --lock-tables=false -u "$mysqlUserName" -h localhost -p"$mysqlPassword" "$mysqlDataBase" book_english | gzip -9 > extra/book_english.sql.gz
 

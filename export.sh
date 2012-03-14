@@ -5,7 +5,7 @@
 # @date    12-15-10
 # @version 1.0
 # @link    http://BibleForge.com
-# @license Affero General Public License Version 3 (AGPL-3.0)
+# @license MIT License (MIT)
 # @author  BibleForge <info@bibleforge.com>
 
 # This program exports the databases used by BibleForge.

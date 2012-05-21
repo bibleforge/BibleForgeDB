@@ -62,3 +62,5 @@ echo "lexicon_greek...";
 gzip -d -c lexicon_greek.sql.gz | mysql -u "$mysqlUserName" -p"$mysqlPassword" "$mysqlDataBase"
 echo "lexicon_hebrew...";
 gzip -d -c lexicon_hebrew.sql.gz | mysql -u "$mysqlUserName" -p"$mysqlPassword" "$mysqlDataBase"
+echo "SphinxSE tables...";
+cat sphinx.sql | mysql -u "$mysqlUserName" -p"$mysqlPassword" "$mysqlDataBase"

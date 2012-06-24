@@ -64,3 +64,6 @@ echo "lexicon_hebrew...";
 gzip -d -c lexicon_hebrew.sql.gz | mysql -u "$mysqlUserName" -p"$mysqlPassword" "$mysqlDataBase"
 echo "SphinxSE tables...";
 cat sphinx.sql | mysql -u "$mysqlUserName" -p"$mysqlPassword" "$mysqlDataBase"
+
+# Beep to indicate completion.
+echo $'\a'

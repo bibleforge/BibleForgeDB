@@ -54,8 +54,8 @@ echo "Importing databases...please wait...";
 
 echo "bible_original...";
 gzip -d -c bible_original.sql.gz | mysql -u "$mysqlUserName" -p"$mysqlPassword" "$mysqlDataBase"
-echo "bible_english_all...";
-gzip -d -c bible_english_all.sql.gz | mysql -u "$mysqlUserName" -p"$mysqlPassword" "$mysqlDataBase"
+echo "bible_en_all...";
+gzip -d -c bible_en_all.sql.gz | mysql -u "$mysqlUserName" -p"$mysqlPassword" "$mysqlDataBase"
 echo "bible_en_em_all...";
 gzip -d -c bible_en_em_all.sql.gz | mysql -u "$mysqlUserName" -p"$mysqlPassword" "$mysqlDataBase"
 echo "lexicon_greek...";

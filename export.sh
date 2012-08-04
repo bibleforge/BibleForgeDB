@@ -37,7 +37,7 @@ stty echo
 # NOTE: This creates two line breaks because "echo" automatically adds a line break.
 echo $'\n'
 
-echo "Exporting databases...please wait...";
+echo "Exporting data...please wait...";
 
 mysqldump --add-locks=false --lock-tables=false -u "$mysqlUserName" -h localhost -p"$mysqlPassword" "$mysqlDataBase" bible_original morphology | gzip -9 > bible_original.sql.gz
 

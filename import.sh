@@ -50,7 +50,7 @@ if [ "${RES:0:11}" = "ERROR 1049 " ]; then
     mysql -u "$mysqlUserName" -p"$mysqlPassword" -e "CREATE DATABASE \`$mysqlDataBase\`;"
 fi
 
-echo "Importing databases...please wait...";
+echo "Importing data...please wait...";
 
 echo "bible_original...";
 gzip -d -c bible_original.sql.gz | mysql -u "$mysqlUserName" -p"$mysqlPassword" "$mysqlDataBase"

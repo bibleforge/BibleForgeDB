@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # BibleForge
-# 
+#
 # @date    02-22-10
 # @version 1.0
 # @link    http://BibleForge.com

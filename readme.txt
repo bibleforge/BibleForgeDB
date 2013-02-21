@@ -11,11 +11,11 @@ The databases are made available under the Open Database License (ODbL), which c
 The texts of the King James Bible, the original Greek and Hebrew, the Greek and Hebrew Lexicons,
 and all other related data, like the Strong's numbers and grammatical information, are in the public domain.
 
-All other text is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported license or higher.
+All other text is licensed under the Creative Commons Attribution3.0 Unported license or higher.
 
 
 For more info about the licenses, please see the following links:
 MIT License (MIT): http://www.opensource.org/licenses/MIT
 ODC Open Database License (ODbL): http://opendatacommons.org/licenses/odbl/summary/
 Public Domain: http://creativecommons.org/publicdomain/mark/1.0/
-Creative Commons by-sa: http://creativecommons.org/licenses/by-sa/3.0/
+Creative Commons by-sa: http://creativecommons.org/licenses/by/3.0/

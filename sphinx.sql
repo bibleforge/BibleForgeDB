@@ -23,7 +23,7 @@ CREATE TABLE `verse_text_en` (
     `weight` int(11) NOT NULL,
     `query` varchar(3072) NOT NULL,
     KEY `query` (`query`)
-) ENGINE=SPHINX DEFAULT CHARSET=latin1 CONNECTION='sphinx://127.0.0.1:9312/verse_text_en';
+) ENGINE=SPHINX DEFAULT CHARSET=utf8 CONNECTION='sphinx://127.0.0.1:9312/verse_text_en';
 
 
 --
@@ -39,7 +39,38 @@ CREATE TABLE `verse_text_en_em` (
     `weight` int(11) NOT NULL,
     `query` varchar(3072) NOT NULL,
     KEY `query` (`query`)
-) ENGINE=SPHINX DEFAULT CHARSET=latin1 CONNECTION='sphinx://127.0.0.1:9312/verse_text_en_em';
+) ENGINE=SPHINX DEFAULT CHARSET=utf8 CONNECTION='sphinx://127.0.0.1:9312/verse_text_en_em';
+
+
+--
+-- Create verse_text_zh_s
+--
+
+-- First, drop it if it exists.
+DROP TABLE IF EXISTS `verse_text_zh_s`;
+
+-- Create table structure
+CREATE TABLE `verse_text_zh_s` (
+    `id` int(10) unsigned NOT NULL,
+    `weight` int(11) NOT NULL,
+    `query` varchar(3072) NOT NULL,
+    KEY `query` (`query`)
+) ENGINE=SPHINX DEFAULT CHARSET=utf8 CONNECTION='sphinx://127.0.0.1:9312/verse_text_zh_s';
+
+--
+-- Create verse_text_zh_t
+--
+
+-- First, drop it if it exists.
+DROP TABLE IF EXISTS `verse_text_zh_t`;
+
+-- Create table structure
+CREATE TABLE `verse_text_zh_t` (
+    `id` int(10) unsigned NOT NULL,
+    `weight` int(11) NOT NULL,
+    `query` varchar(3072) NOT NULL,
+    KEY `query` (`query`)
+) ENGINE=SPHINX DEFAULT CHARSET=utf8 CONNECTION='sphinx://127.0.0.1:9312/verse_text_zh_t';
 
 
 
@@ -52,4 +83,4 @@ CREATE TABLE `morphological_en` (
     `query` varchar(3072) NOT NULL,
     `verseID` int(11) NOT NULL,
     KEY `query` (`query`)
-) ENGINE=SPHINX DEFAULT CHARSET=latin1 CONNECTION='sphinx://127.0.0.1:9312/morphological_en';
+) ENGINE=SPHINX DEFAULT CHARSET=utf8 CONNECTION='sphinx://127.0.0.1:9312/morphological_en';

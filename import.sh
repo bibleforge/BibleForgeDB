@@ -58,6 +58,10 @@ echo "bible_en_all...";
 gzip -d -c bible_en_all.sql.gz | mysql -u "$mysqlUserName" -p"$mysqlPassword" "$mysqlDataBase"
 echo "bible_en_em_all...";
 gzip -d -c bible_en_em_all.sql.gz | mysql -u "$mysqlUserName" -p"$mysqlPassword" "$mysqlDataBase"
+echo "bible_zh_s_all...";
+gzip -d -c bible_zh_s_all.sql.gz | mysql -u "$mysqlUserName" -p"$mysqlPassword" "$mysqlDataBase"
+echo "bible_zh_t_all...";
+gzip -d -c bible_zh_t_all.sql.gz | mysql -u "$mysqlUserName" -p"$mysqlPassword" "$mysqlDataBase"
 echo "lexicon_greek...";
 gzip -d -c lexicon_greek.sql.gz | mysql -u "$mysqlUserName" -p"$mysqlPassword" "$mysqlDataBase"
 echo "lexicon_hebrew...";

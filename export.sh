@@ -46,9 +46,11 @@ mysqldump --add-locks=false --lock-tables=false -u "$mysqlUserName" -h localhost
 # There is no morphology for bible_en_em, yet.
 mysqldump --add-locks=false --lock-tables=false -u "$mysqlUserName" -h localhost -p"$mysqlPassword" "$mysqlDataBase" bible_en_em bible_en_em_html bible_en_em_verses | gzip -9 > bible_en_em_all.sql.gz
 
-mysqldump --add-locks=false --lock-tables=false -u "$mysqlUserName" -h localhost -p"$mysqlPassword" "$mysqlDataBase" lexicon_greek | gzip -9 > lexicon_greek.sql.gz
+# Simplified Chinese has no morphology table.
+mysqldump --add-locks=false --lock-tables=false -u "$mysqlUserName" -h localhost -p"$mysqlPassword" "$mysqlDataBase" bible_zh_s bible_zh_s_html bible_zh_s_verses | gzip -9 > bible_zh_s_all.sql.gz
 
-mysqldump --add-locks=false --lock-tables=false -u "$mysqlUserName" -h localhost -p"$mysqlPassword" "$mysqlDataBase" lexicon_hebrew | gzip -9 > lexicon_hebrew.sql.gz
+# Traditional Chinese has no morphology table.
+mysqldump --add-locks=false --lock-tables=false -u "$mysqlUserName" -h localhost -p"$mysqlPassword" "$mysqlDataBase" bible_zh_t bible_zh_t_html bible_zh_t_verses | gzip -9 > bible_zh_t_all.sql.gz
 
 mysqldump --add-locks=false --lock-tables=false -u "$mysqlUserName" -h localhost -p"$mysqlPassword" "$mysqlDataBase" book_english | gzip -9 > extra/book_english.sql.gz
 

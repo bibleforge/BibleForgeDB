@@ -10,7 +10,7 @@ The texts of the King James Bible, the original Greek and Hebrew, the Greek and 
 and all other related data, such as the Strong's numbers and grammatical information, are in the public domain.
 
 The Chinese King James Version (中文英皇欽定本) (bible_zh_s_all.sql.gz and bible_zh_t_all.sql.gz) is distributed
-under the the Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0).
+under the Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0).
 The CKJV was created by the team from http://ckjv.asia/.
 
 To the extent possible under law, the author(s) have dedicated all copyright and related and
